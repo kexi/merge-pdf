@@ -1,6 +1,6 @@
 {
     "name": "kei/pdf",
-    "description": "Example of concatinating 2 pdf files.",
+    "description": "An example connecting pdf files.",
     "authors": [
         {
             "name": "Kei Nakayama",
