@@ -12,9 +12,6 @@
         <delete dir="build" />
         <delete dir="dist" />
     </target>
-    <target name="clean-dist">
-        <delete dir="dist" />
-    </target>
     <target name="build" depends="prepare">
         <copy  todir="build">
             <fileset dir="." includes="src/*.php" />
@@ -28,7 +25,7 @@
             <fileset dir="build" includes="composer.*" />
         </delete>
     </target>
-    <target name="package" depends="build">
+    <target name="package" depends="clean,build">
         <pharpackage basedir="build" destfile="./dist/merge.phar" stub="src/stub.php">
             <fileset dir="build" includes="**/**" />
         </pharpackage>
