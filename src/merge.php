@@ -7,7 +7,7 @@
  * Time: 13:05
  */
 
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
 use ZendPdf\PdfDocument;
 use ZendPdf\Exception as PdfException;
