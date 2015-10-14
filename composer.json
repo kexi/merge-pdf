@@ -1,0 +1,19 @@
+{
+    "name": "kei/pdf",
+    "description": "Example of concatinating 2 pdf files.",
+    "authors": [
+        {
+            "name": "Kei Nakayama",
+            "email": "kei.of.nakayama@gmail.com"
+        }
+    ],
+    "require": {
+        "zendframework/zendpdf": "^2.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.zendframework.com/"
+        }
+    ]
+}
