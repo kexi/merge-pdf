@@ -2,18 +2,22 @@
 /**
  * Example of merging PDF files into one PDF file.
  *
- * User: Kei Nakayama <kei.of.nakayama@gmail.com>
- * Date: 2015/10/14
- * Time: 13:05
+ * PHP Version: 5.5
+ *
+ * @category Default
+ * @package  None
+ * @author   Kei Nakayama <kei.of.nakayama@gmail.com>
+ * @license  MIT https://opensource.org/licenses/MIT
+ * @link     None
  */
 
 require_once "../vendor/autoload.php";
 
 use ZendPdf\PdfDocument;
-use ZendPdf\Exception as PdfException;
 
 if (count($argv) < 3) {
-    echo "USAGE: php $argv[0] <pdf_file1> <pdf_file2> [<pdf_file3> [...]] <output_pdf_file>" . PHP_EOL;
+    echo "USAGE: php $argv[0] "
+        . "<pdf_file1> <pdf_file2> [<pdf_file3> [...]] <output_pdf_file>" . PHP_EOL;
     exit;
 }
 
