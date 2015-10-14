@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PDF Merge" default="build" basedir="." description="Example of mereging PDF files into one PDF file.">
+    <target name="default" depends="prepare">
+
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="build/src"/>
+        <mkdir dir="dist"/>
+    </target>
+    <target name="clean">
+        <delete dir="build" />
+        <delete dir="dist" />
+    </target>
+    <target name="clean-dist">
+        <delete dir="dist" />
+    </target>
+    <target name="build" depends="prepare">
+        <copy  todir="build">
+            <fileset dir="." includes="src/*.php" />
+            <fileset dir="." includes="composer.*" />
+        </copy>
+        <composer composer="/usr/local/bin/composer" command="install">
+            <arg value='--working-dir=build' />
+            <arg value='--no-dev' />
+        </composer>
+        <delete>
+            <fileset dir="build" includes="composer.*" />
+        </delete>
+    </target>
+    <target name="package" depends="build">
+        <pharpackage basedir="build" destfile="./dist/merge.phar" stub="src/stub.php">
+            <fileset dir="build" includes="**/**" />
+        </pharpackage>
+    </target>
+</project>

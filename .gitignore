@@ -1,3 +1,6 @@
 .idea
+.vagrant
 vendor
 test
+build
+dist
