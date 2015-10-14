@@ -1,6 +1,6 @@
 <?php
 /**
- * An example of concatinating PDF files.
+ * An example of merging PDF files into one PDF file.
  *
  * User: Kei Nakayama <kei.of.nakayama@gmail.com>
  * Date: 2015/10/14
@@ -13,7 +13,7 @@ use ZendPdf\PdfDocument;
 use ZendPdf\Exception as PdfException;
 
 if (count($argv) < 3) {
-    echo "USAGE php pdfconcat.php <pdf_file1> [<pdf_file2> [<pdf_file3>[...]]] <output_pdf_file>";
+    echo "USAGE php $argv[0] <pdf_file1> [<pdf_file2> [<pdf_file3>[...]]] <output_pdf_file>";
     exit;
 }
 
