@@ -1,6 +1,6 @@
 {
-    "name": "kei/pdf",
-    "description": "An example connecting pdf files.",
+    "name": "kei/mergepdf",
+    "description": "Example of merge PDF files into one PDF file.",
     "authors": [
         {
             "name": "Kei Nakayama",
